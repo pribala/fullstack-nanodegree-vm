@@ -11,15 +11,6 @@ CREATE DATABASE tournament;
 -- Connect to the database
 \c tournament;
 
---Drop tables
-DROP TABLE players CASCADE;
-DROP TABLE matches CASCADE;
-
--- DROP VIEWS
-DROP VIEW player_wins CASCADE;
-DROP VIEW player_matches CASCADE;
-DROP VIEW player_standings;
-
 --Create the database schema
 CREATE TABLE players (
 	player_id SERIAL PRIMARY KEY,
