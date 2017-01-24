@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel=stylesheet type=text/css href= "{{url_for('static', filename='main.css')}}">
+		<title>Item Catalog</title>
+	</head>
+	<body>
+		<h1 class="top-section">Movie Catalog <span class="nav-link"><a href="{{url_for('showItems', category_id = item.category_id)}}">Back</a>
+		</span>
+		<span class="top-link"><a href="{{url_for('showLogin')}}">Login</a></span>
+		</h1>
+		<div class="display-pane">
+			<h2>{{ item.title }}</h2>
+			<p class="parastyle">{{ message }}</p>
+			<p class="parastyle">{{ item.description }}</p>
+		</div>	
+	</body>
+</html>	

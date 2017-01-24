@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel=stylesheet type=text/css href= "{{url_for('static', filename='main.css')}}">
+		<title>Item Catalog</title>
+	</head>
+	<body>
+		<h1 class="top-section">Movie Catalog <span class="nav-link"><a href="{{url_for('CatalogItemJSON')}}">Catalog</a>
+		</span><span class="top-link"><a href="{{url_for('disconnect')}}">Logout</a></span></h1>
+		<div class = 'flash'>
+		{% with messages = get_flashed_messages() %}
+		{% if messages %}
+		<ul>
+			{% for msg in messages %}
+			<li><strong>{{ msg }}</strong></li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+		{% endwith %}
+		</div>
+
+		<div class="display-pane">
+			<div class="info-pane">
+			<h3>Categories
+			<span class="item-link"><a href="{{url_for('newCategory')}}">Add Category</a></span></h3>
+				{% for i in categories %}
+					<p><a href="{{url_for('showItems', category_id = i.name)}}">{{ i.name }}</a></p>
+				{% endfor %}
+				{{ message }}
+			</div>
+			<div class="details-pane">
+				<h3>Latest items</h3>
+				{% for item in items %}
+					<p> {{ item}} </p>
+				{% endfor %}
+			</div>
+		</div>	
+	</body>
+</html>	
+

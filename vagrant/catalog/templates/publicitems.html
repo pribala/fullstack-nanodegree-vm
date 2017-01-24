@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel=stylesheet type=text/css href= "{{url_for('static', filename='main.css')}}">
+		<title>Item Catalog</title>
+	</head>
+	<body>
+		<h1 class="top-section">Movie Catalog <span class="top-link"><a href="{{url_for('showLogin')}}">Login</a></span></h1>
+		<div class="display-pane">
+			<div class="info-pane">
+				<h3>Categories</h3>
+				{% for c in categories %}
+					<p><a href="{{url_for('showItems', category_id = c.name)}}">{{ c.name }}</a><p>
+				{% endfor %}
+			</div>
+			<div class="details-pane">
+				<h3>{{category.name}}: Titles
+				</h3>
+				<p>{{ message }}</p>
+				{% for item in items %}
+					<p><a href="{{url_for('itemDetails', category_id = item.category_id, item_id = item.id)}}">{{ item.title }}</a></p>
+				{% endfor %}
+			</div>
+		</div>	
+	</body>
+</html>	
+

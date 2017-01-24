@@ -1,0 +1,30 @@
+<html>
+<head>
+	<link rel=stylesheet type=text/css href= "{{url_for('static', filename='main.css')}}">
+	<title>Item Catalog</title>
+</head>
+<body>
+<h1 class="top-section">Movie Catalog <span class="nav-link"><a href="{{url_for('showCategories')}}">Cancel</a></span>
+	<span class="top-link"><a href="{{url_for('gdisconnect')}}">Logout</a></span>
+</h1>
+<div class="display-pane">
+<h2 class="sub-heading">New Item</h2>
+<form action="{{ url_for('newItem')}}" method = 'POST'>
+<p class="parastyle">Title:</p>
+<p class="parastyle"><input type = 'text' size = '50' name = 'title'></p>
+<p class="parastyle">Description:</p>
+<p class="parastyle"><input type = 'text' size = '100' name = 'description'></p>
+<p class="parastyle">Category</p>
+<p class="parastyle"><select name='categoryid' required>
+{% for c in categories %}
+<option value="{{c.name}}">{{c.name}}</option> 
+{% endfor %}
+</select>
+</p>
+<p class="parastyle"><input type='submit' class="nav-button" value='Create'></p>
+</form>
+<p>
+{{ message }}</p>
+</div>
+</body>
+</html>
