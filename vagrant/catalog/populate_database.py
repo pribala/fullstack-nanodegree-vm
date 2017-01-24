@@ -32,7 +32,7 @@ session.commit()
 
 Item1 = Item(title="Best Friends Whenever", description="Two teens who can ping pong \
              through the past, present and future are having the times of \
-             their lives!", 
+             their lives!",
              category=category1, user=user1)
 session.add(Item1)
 session.commit()

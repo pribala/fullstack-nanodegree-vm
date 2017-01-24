@@ -32,7 +32,7 @@ class User(Base):
     __tablename__ = 'user'
     id = Column(Integer, primary_key=True)
     name = Column(String(250), nullable=False)
-    email = Column(String(250), nullable=False)	
+    email = Column(String(250), nullable=False)
 
 
 # class for defining item info
@@ -46,7 +46,7 @@ class Item(Base):
     category_id = Column(Integer, ForeignKey('category.name'))
     category = relationship(Category)
     user_id = Column(Integer, ForeignKey('user.id'))
-    user = relationship(User)	
+    user = relationship(User)
 
 # We added this serialize function to be able to send JSON objects in a
 # serializable format
@@ -54,11 +54,11 @@ class Item(Base):
     def serialize(self):
 
         return {
-            'id': self.id,		
+            'id': self.id,
             'title': self.title,
             'description': self.description,
         }
 
 engine = create_engine('sqlite:///itemcatalog.db')
-#Base.metadata.drop_all(engine)
+# Base.metadata.drop_all(engine)
 Base.metadata.create_all(engine)

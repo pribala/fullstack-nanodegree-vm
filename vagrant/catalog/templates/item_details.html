@@ -13,8 +13,9 @@
 			<h2>{{ item.title }}</h2>
 			<p class="parastyle">{{ message }}</p>
 			<p class="parastyle">{{ item.description }}</p>
-			<p class="parastyle"><span class="nav-button""><a href="{{url_for('editItem', category_id=item.category_id, item_id=item.id)}}">Edit</a></span>
-			<span class="nav-button"><a href="{{url_for('deleteItem', category_id=item.category_id, item_id=item.id)}}">Delete</a></span></p>
+			<p class="parastyle"><span class='json-button'><a href="{{url_for('editItem', category_id=item.category_id, item_id=item.id)}}">Edit</a></span>
+			<span class='json-button'><a href="{{url_for('deleteItem', category_id=item.category_id, item_id=item.id)}}">Delete</a></span></p>
+			<p class="parastyle"><span class="json-button""><a href="{{url_for('itemJSON', item_id=item.id)}}">Item Detail</a></span></p>
 		</div>	
 	</body>
 </html>	
