@@ -51,6 +51,16 @@ delete items. The app also checks for the owner of each item and allows CRUD ope
 items. The project implements a JSON endpoint that serves the same information as displayed in the HTML endpoints 
 for an arbitrary item in the catalog.
 
+### JSON Endpoints
+
+To view the entire catalog as JSON: 
+  * click the catalog link on the heading bar
+  * visit the url localhost:8000/catalog
+
+To view JSON for an item in the catalog
+  * click the item detail link on the item details page
+  * visit the url localhost:8000/item.json/<item-id>  
+
 ###What's Included
 
 Within the repo you'll find the following directories and files:
