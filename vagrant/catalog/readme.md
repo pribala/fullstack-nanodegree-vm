@@ -1,4 +1,4 @@
-#Item Catalog Project
+# Item Catalog Project
 
 This project is a RESTful web application using the Python framework Flask along with implementing third-party OAuth 
 authentication. The application uses the SQLAlchemy to perform CRUD operations to create, read, update and delete 
@@ -61,7 +61,7 @@ To view JSON for an item in the catalog
   * click the item detail link on the item details page
   * visit the url localhost:8000/item.json/<item-id>  
 
-###What's Included
+### What's Included
 
 Within the repo you'll find the following directories and files:
 
@@ -84,7 +84,7 @@ Within the repo you'll find the following directories and files:
   * /static 
       * main.css  
 
-###Command line instructions to setup the database and run the application:
+### Command line instructions to setup the database and run the application:
 
 Navigate to /vagrant/catalog (after the VM is running and you are logged in). Then run the following commands
 
@@ -92,7 +92,7 @@ $python database_setup.py
 $python populate_database.py
 $python application.py : starts the application at url 'http://localhost:8000'. 
 
-###Reference:
+### Reference:
   * Udacity's Working with CRUD course
   * FLASK Documentation
   * SQLAlchemy documentation
