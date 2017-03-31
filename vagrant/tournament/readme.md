@@ -1,4 +1,4 @@
-#Tournament Results Project
+# Tournament Results Project
 
 This project consists of a Python module that uses the PostgreSQL database to keep track of players and matches 
 in a game tournament.
@@ -66,7 +66,7 @@ swissPairings()
 
 Get the pairings for the next matches.
 
-###What's Included
+### What's Included
 
 Within the repo you'll find the following directories and files:
 
@@ -77,7 +77,7 @@ Within the repo you'll find the following directories and files:
       * tournament_test.py -  this is a client program which will use your functions written in the tournament.py module.
       * tournament_script.py - this script file can be used to generate random matches 
 
-###Command line instructions to setup the database and run tests on the module:
+### Command line instructions to setup the database and run tests on the module:
 
 Navigate to /vagrant/tournament (after the VM is running and you are logged in). Then run the following commands
 
@@ -85,7 +85,7 @@ $psql -f tournament.sql : runs the tournament.sql file to build and access the t
 
 $python tournament_test.py : runs the test functions for the module. 
 
-###Reference:
+### Reference:
   * Udacity's Intro to Relational Databases course
   * PostgreSQL Documentation
   * psycopg2 documentation
