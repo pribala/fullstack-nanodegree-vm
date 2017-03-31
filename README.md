@@ -1,4 +1,4 @@
-rdb-fullstack
+Database Projects - Fullstack
 =============
 
-Common code for the Relational Databases and Full Stack Fundamentals courses
+Projects for the Relational Databases and Full Stack Fundamentals courses
